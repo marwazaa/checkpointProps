@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Pcomponent from './profile/Profilecomponent'
+import image from './img.jpg'
+
+
+import React from 'react'
 
 function App() {
+
+  const handleName=(name)=> {
+    alert (`my name is ${name}`)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Pcomponent
+  
+      fullName="marwa zaabi" 
+      bio="mz"
+      profession="master"
+      handleName={handleName} >
+
+     <div>
+         <img src={image} width='400px'></img>
+      </div>
+
+
+      </Pcomponent>
+
     </div>
-  );
+    
+  )
 }
 
 export default App;
